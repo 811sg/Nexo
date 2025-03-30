@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+/* ======= RESET ======= */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+
+body { background-color: #000; color: #fff; text-align: center; }
+
+/* ======= SECCIÓN QUIÉNES SOMOS ======= */
+.quienes-somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    position: relative;
+    padding: 180px 0 100px;
+    overflow: hidden;
+}
+
+.quienes-somos .container {
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+}
+
+.quienes-somos h1 { font-size: 4rem; font-weight: 900; color: white; margin-bottom: 15px; }
+
+.quienes-somos p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+.quienes-somos .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    border: none;
+}
+
+.quienes-somos .btn:hover {
+    background: #ffffff;
+    color: #000;
+    box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ======= ESTILO DE PLANES ======= */
+.plan-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 300px;
+    padding-top: 150px;
+}
+
+.plan-card {
+    width: clamp(220px, 40%, 300px);
+    padding: 20px;
+    border-radius: 15px;
+    background: #1a1a1a;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.plan-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.plan-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+
+.plan-card .price {
+    font-size: 24px;
+    font-weight: 900;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.plan-card:hover .price { transform: scale(1.1); }
+
+.plan-card ul { list-style: none; padding: 0; margin-bottom: 15px; }
+
+.plan-card ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-card ul li i { margin-right: 8px; color: #fff; }
+
+.plan-card .btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.plan-card .btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+    .quienes-somos { padding-top: 120px; }
+    .quienes-somos h1 { font-size: 2.5rem; }
+    .quienes-somos p { font-size: 1rem; }
+    .quienes-somos .container { margin-top: 3%; }
+
+    .plan-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 200px;
+        gap: 20px;
+    }
+
+    .plan-card { width: 80%; }
+}
+
+@media (max-width: 480px) {
+    .quienes-somos { padding-top: 90px; }
+    .quienes-somos h1 { font-size: 2rem; max-width: 85%; }
+    .quienes-somos p { font-size: 0.85rem; max-width: 80%; }
+
+    .plan-container { margin-top: 150px; }
+    
+    .plan-card { width: 95%; }
+}

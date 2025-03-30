@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ======= SECCIÓN QUIÉNES SOMOS ======= */
+.quienes-somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    padding: 100px 20px 50px;
+}
+
+.quienes-somos .container {
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+    margin-top: 5%;
+}
+
+.quienes-somos h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.quienes-somos p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+/* ======= BOTÓN ======= */
+.quienes-somos .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.quienes-somos .btn:hover {
+    background: #ddd;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* ======= CONTENEDOR GENERAL ======= */
+#content {
+    max-width: 1100px;
+    width: 90%;
+    margin: 5% auto;
+    text-align: center;
+}
+
+.nuestros-proyectos h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-top: 10%;
+    margin-top: 15%;
+}
+
+/* ======= TARJETAS ======= */
+#web-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.web-card {
+    width: clamp(220px, 35%, 280px);
+    padding: 18px;
+    border-radius: 15px;
+    background: #1a1a1a;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.web-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.web-card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #333;
+}
+
+.web-card h4 {
+    margin: 15px 0 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.web-card p {
+    margin: 6px 0;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Tarjetas "Próximamente" */
+.upcoming {
+    width: clamp(220px, 35%, 280px);
+    padding: 18px;
+    border-radius: 15px;
+    background: #333;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+}
+
+.upcoming .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 1024px) {
+    #web-container {
+        gap: 30px;
+    }
+    .web-card, .upcoming {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .quienes-somos h1 {
+        font-size: 2rem;
+    }
+    .quienes-somos p {
+        font-size: 1rem;
+    }
+    .quienes-somos .container {
+        margin-top: 5%;
+    }
+    #web-container {
+        gap: 20px;
+    }
+    .web-card, .upcoming {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    #web-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .web-card, .upcoming {
+        width: 90%;
+    }
+}

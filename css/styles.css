@@ -1,0 +1,266 @@
+/* Estilos generales */
+body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; background-color: #000; color: #fff; }
+
+/* Navbar */
+.navbar { background: black; padding: 15px 0; transition: background 0.3s ease-in-out; border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+.navbar-nav { margin: auto; text-align: center;font-family: 'Montserrat', sans-serif;}
+.navbar-nav .nav-item { margin: 5% 20px 0 0; } 
+.nav-link { color: white !important; font-size: 14px; font-weight: 200; letter-spacing: 3px; position: relative; padding: 8px 0; transition: color 0.3s ease-in-out; }
+
+/* Hover */
+.nav-link:hover { color: #ccc !important; }
+.nav-link::after { content: ""; display: block; height: 1px; width: 100%; background: white; transform: scaleX(0); transition: transform 0.3s ease-in-out; }
+.nav-link:hover::after { transform: scaleX(1); }
+
+/* Botón hamburguesa */
+.custom-toggler { border: none; background: transparent; padding: 0.5rem 1rem; display: flex; flex-direction: column; gap: 5px; cursor: pointer; transition: transform 0.3s ease-in-out; }
+.toggler-icon { width: 30px; height: 3px; background: white; border-radius: 5px; transition: all 0.3s ease-in-out; }
+
+/* Animación del botón cuando está abierto */
+.navbar-toggler[aria-expanded="true"] .toggler-icon:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.navbar-toggler[aria-expanded="true"] .toggler-icon:nth-child(2) { opacity: 0; }
+.navbar-toggler[aria-expanded="true"] .toggler-icon:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* Menú en pantallas pequeñas */
+@media (max-width: 991px) {
+    .navbar { padding: 10px 0; }
+    .navbar-nav { flex-direction: column; align-items: center; }
+    .nav-item { margin: 12px 0; }
+    .navbar-collapse { opacity: 0; transform: translateY(-10px); transition: opacity 0.3s ease, transform 0.3s ease; }
+    .navbar-collapse.show { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero */
+.hero { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 90vh; 
+    background-color: black; 
+    text-align: center; 
+    overflow: hidden; 
+    padding: 5vh 0; /* Espaciado dinámico */
+    gap: 3vh; /* Separación proporcional */
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/* Contenedor del logo y títulos */
+.logo-container { 
+    text-align: center; 
+    width: 100%; 
+    margin-bottom: 5vh; /* Espaciado dinámico */
+} 
+.logo-container h1 { 
+    font-family: 'Montserrat', sans-serif;
+    color: white; 
+    font-size: 5rem; 
+    font-weight: 900;  /* Aumenta el grosor de la letra */
+}
+
+.logo-container h2 { 
+    font-family: 'Montserrat', sans-serif;
+    color: gray; 
+    font-size: 1.5rem; 
+    letter-spacing: 3px; 
+    margin-bottom: 2vh; /* Espaciado dinámico */
+    font-weight: 800;  /* Puedes también aumentar el grosor de h2 si deseas */
+}
+
+
+.logo { 
+    width: 286px; 
+    max-width: 90%; 
+    margin-top: 15px; 
+}
+
+.mensaje {
+  text-align: center;
+  color: white;
+  font-size: 1rem; /* Tamaño base */
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+  padding: 15px;
+  line-height: 1.4;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .mensaje {
+      font-size: 0.8rem;
+      padding: 12px;
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mensaje {
+      font-size: 0.8rem;
+      padding: 10px;
+      max-width: 95%;
+      letter-spacing: 1px;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero { gap: 4vh; padding: 6vh 0; }
+    .logo-container { margin-bottom: 4vh; }
+    .logo { width: 250px; }
+    .logo-container h1 { font-size: 4rem; }
+    .logo-container h2 { font-size: 1.3rem; }
+}
+
+@media (max-width: 768px) {
+    .hero { gap: 3vh; padding: 5vh 0; }
+    .logo-container { margin-bottom: 3vh; }
+    .logo { width: 200px; max-width: 80%; margin-bottom: 15px; }
+    .logo-container h1 { font-size: 3.5rem; }
+    .logo-container h2 { font-size: 1.2rem; }
+}
+
+@media (max-width: 500px) {
+    .hero { gap: 2vh; padding: 4vh 0; }
+    .logo-container { margin-bottom: 2vh; }
+    .logo { width: 180px; max-width: 75%; margin-bottom: 10px; }
+    .logo-container h1 { font-size: 3rem; }
+    .logo-container h2 { font-size: 1rem; }
+}
+
+
+/* Estilos generales */
+/* Estilos del Footer */
+/* Estilo general del footer */
+.footer {
+  background-color: #121212;  /* Fondo negro casi total */
+  color: #fff;  /* Texto blanco */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 0 15px;
+}
+
+.footer-section h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.footer-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.footer-section a {
+  color: #fff;  /* Enlaces blancos */
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #bbb;  /* Cambio de color de enlaces al pasar el mouse */
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #bbb;  /* Cambio sutil en el hover */
+}
+
+.footer-line {
+  width: 80%;
+  height: 1px;
+  background-color: #fff;
+  margin: 40px auto;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #bbb;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+/* Estilos para el botón de WhatsApp (redondo, simple) *
+/* Estilos del botón flotante de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+/* Animación cuando el cursor pasa por encima */
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+/* Para asegurar que el texto dentro del botón esté centrado */
+.whatsapp-button span {
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-section {
+      margin-bottom: 30px;
+  }
+
+  .footer-line {
+      width: 90%;
+  }
+}
+
